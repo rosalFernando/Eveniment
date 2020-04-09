@@ -1,7 +1,12 @@
 package com.ferrocu.eveniment
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -15,18 +20,54 @@ class listadoAcont : AppCompatActivity() {
     private var TAG:String="Listado"
     private lateinit var context:Context
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         context=this
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_listado_acont)
 
         val toolbar:Toolbar=findViewById(R.id.Apptoolbar)
-        setSupportActionBar(toolbar)
+
+        if(toolbar != null){
+            setSupportActionBar(toolbar)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+            supportActionBar?.setDisplayShowHomeEnabled(true)
+            supportActionBar?.setTitle("Listado")
+            toolbar.setNavigationOnClickListener { onBackPressed() }
+        }else{
+            MyLog().d(TAG,"imposible cargar")
+
+        }
+
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        val inflater: MenuInflater=menuInflater
+        inflater.inflate(R.menu.menu,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+       return when (item.itemId) {
+            R.id.menuAcercaDe ->{
+                startActivity(Intent(this@listadoAcont,AcercaDe::class.java))
+                true
+            }
+
+
+            else -> {
+                 super.onOptionsItemSelected(item)
+            }
+        }
+
+
     }
 
     override fun onNavigateUp(): Boolean {

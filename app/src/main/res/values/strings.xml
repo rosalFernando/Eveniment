@@ -3,4 +3,5 @@
     <string name="title_activity_listado_acont">Eventos</string>
     <string name="aun_no_has_a_adido_ningun_evento">Aun no has añadido ningun evento</string>
     <string name="title_activity_acerca_de">AcercaDe</string>
+    <string name="acerca_de">Acerca de</string>
 </resources>
