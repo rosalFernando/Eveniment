@@ -2,7 +2,7 @@ package com.ferrocu.eveniment
 
 import android.content.Context
 import android.os.Bundle
-import android.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_acerca_de.*
