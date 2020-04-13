@@ -4,4 +4,6 @@
     <string name="aun_no_has_a_adido_ningun_evento">Aun no has añadido ningun evento</string>
     <string name="title_activity_acerca_de">AcercaDe</string>
     <string name="acerca_de">Acerca de</string>
+    <string name="title_activity_buscar_acont">buscar_acont</string>
+    <string name="buscar_contecimiento">Buscar contecimiento...</string>
 </resources>

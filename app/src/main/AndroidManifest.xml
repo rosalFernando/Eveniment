@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ferrocu.eveniment">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,9 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".buscar_acont"
+            android:label="@string/title_activity_buscar_acont"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".AcercaDe"
             android:label="@string/title_activity_acerca_de"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".listadoAcont"
             android:label="@string/title_activity_listado_acont"
